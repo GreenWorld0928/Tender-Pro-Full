@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function AreaDataPlatform() {
   return (
@@ -29,8 +30,8 @@ export default function AreaDataPlatform() {
               </p>
             </div>
             <div className="pt-[50px] flex flex-row items-center gap-6 w-full">
-              <a className="btn-primary" href="#">Book A Demo</a>
-              <a className="btn-primary-outlined" href="#">Contact Us</a>
+              <Link className="btn-primary" href="#">Book A Demo</Link>
+              <Link className="btn-primary-outlined" href="#">Contact Us</Link>
             </div>
           </div>
           <div className="w-full lg:w-1/2 pt-10 md:pt-0 md:pl-4">

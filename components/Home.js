@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
             accumsan felis nec
           </p>
-          <a className="btn-primary" href="#">Book A Demo</a>
+          <Link className="btn-primary" href="#">Book A Demo</Link>
           <Image
             className="mx-auto w-full aspect-[516/537] max-w-[516px] mt-[69px]"
             src="/images/hero.png"

@@ -1,25 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import Select from "react-select";
+import SubmitForm from "./common/SubmitForm";
 
 export default function ContactUs() {
-    const inputStyle = "mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-sm text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
-    const options = [
-        { value: "0", label: "industry 1" },
-        { value: "1", label: "industry 2" },
-        { value: "2", label: "industry 3" },
-        { value: "3", label: "industry 4" },
-        { value: "4", label: "industry 5" },
-    ];
-    const capchaRef = useRef();
-    const [recapchaToken, setRecapchaToken] = useState("");
-	useEffect(()=>{
-		if(capchaRef){
-			capchaRef.current.reset(); 
-		}
-	}, [capchaRef]); 
+
 
     return (
         <main className="w-full h-full mt-1 mb-[195px]">
@@ -58,52 +42,7 @@ export default function ContactUs() {
                                 forward to embarking on this journey with you.
                             </p>
                         </div>
-                        <form>
-                            <div className="flex flex-row justify-between">
-                                <div className="me-2">
-                                    <span className="paragraph1">First Name</span>
-                                    <input type="text" className={inputStyle} />
-                                </div>
-                                <div className="ms-2">
-                                    <span className="paragraph1">Last Name</span>
-                                    <input type="text" className={inputStyle} />
-                                </div>
-                            </div>
-                            <div className="my-4">
-                                <span className="paragraph1">Email</span>
-                                <input type="text" className={inputStyle} />
-                            </div>
-                            <div className="my-4">
-                                <span className="paragraph1">Company Name</span>
-                                <input type="text" className={inputStyle} />
-                            </div>
-                            <div className="my-4">
-                                <span className="paragraph1">What is your industry?</span>
-                                <Select
-                                    options={options}
-                                    placeholder="Select the industry you work in"
-                                />
-                            </div>
-                            <div className="my-4">
-                                <span className="paragraph1">Message</span>
-                                <textarea
-                                    className={inputStyle}
-                                    onChange={(e) => {
-                                    }}
-                                    rows="3"
-                                ></textarea>
-                            </div>
-                            <div className="my-3 d-flex justify-content-center">
-                                <ReCAPTCHA
-                                    ref={capchaRef}
-                                    sitekey={`6LfjNzQkAAAAALmsm9-KscQIO3Q6-9gIDx1bGaua`}
-                                    onChange={(token) => setRecapchaToken(token)}
-                                />
-                            </div>
-                            <a className="btn-primary w-full text-sm" href="#">Submit</a>
-                        </form>
-
-
+                    <SubmitForm/>
                     </div>
                 </div>
             </section>

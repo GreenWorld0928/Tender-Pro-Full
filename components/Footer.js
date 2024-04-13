@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -20,10 +21,9 @@ export default function Footer() {
           <div
             className="flex flex-col sm:flex-row items-center gap-[30px] w-full md:w-auto"
           >
-            <a className="btn-primary-outlined w-full sm:w-[172px]" href="#"
-              >Get In Touch</a
-            >
-            <a className="btn-primary w-full sm:w-[172px]" href="#">Book A Demo</a>
+            <Link className="btn-primary-outlined w-full sm:w-[172px]" href="#"
+            >Get In Touch</Link>
+            <Link className="btn-primary w-full sm:w-[172px]" href="#">Book A Demo</Link>
           </div>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function Footer() {
               We radically out perform. We deliver the best predictive data
             </p>
             <div className="flex items-center space-x-2.5 pt-2.5">
-              <a href="#" target="_blank">
+              <Link href="#" target="_blank">
                 <Image
                   className="w-8 h-8 rounded-full"
                   src="/images/linkedin.png"
@@ -45,8 +45,8 @@ export default function Footer() {
                   height={32}
                   alt=""
                 />
-              </a>
-              <a href="#" target="_blank">
+              </Link>
+              <Link href="#" target="_blank">
                 <Image
                   className="w-8 h-8 rounded-full"
                   src="/images/youtube.png"
@@ -54,23 +54,23 @@ export default function Footer() {
                   height={32}
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="">
             <p className="paragraph2">Products</p>
             <ul className="pt-4 space-y-2">
               <li>
-                <a className="footer-link" href="#">AREA Data Platform</a>
+                <Link className="footer-link" href="#">AREA Data Platform</Link>
               </li>
               <li>
-                <a className="footer-link" href="#">Build To Rent</a>
+                <Link className="footer-link" href="#">Build To Rent</Link>
               </li>
               <li>
-                <a className="footer-link" href="#">High Net Worth</a>
+                <Link className="footer-link" href="#">High Net Worth</Link>
               </li>
               <li>
-                <a className="footer-link" href="#">Landlord Identification</a>
+                <Link className="footer-link" href="#">Landlord Identification</Link>
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
             <p className="paragraph2">Products</p>
             <ul className="pt-4">
               <li>
-                <a className="footer-link" href="#">About us</a>
+                <Link className="footer-link" href="#">About us</Link>
               </li>
             </ul>
           </div>
@@ -91,8 +91,8 @@ export default function Footer() {
             © All content copyright TenderPro 2024. All rights reserved.
           </p>
           <p className="paragraph2 pb-4 md:pb-0">
-            <a className="underline" href="#">Privacy policy</a> and
-            <a className="underline" href="#">Terms of service</a>
+            <Link className="underline" href="#">Privacy policy</Link> and
+            <Link className="underline" href="#">Terms of service</Link>
           </p>
         </div>
       </section>
