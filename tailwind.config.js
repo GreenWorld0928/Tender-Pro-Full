@@ -7,6 +7,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "400px",
+        dx: "1366px",
+        "2dx": "1440px",
+        "3xl": "1680px",
+      },
+      colors: {
+        blue: {
+          primary: "#2E4BE9",
+        },
+        gray: {
+          primary: "#141417",
+        }
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

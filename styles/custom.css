@@ -1,0 +1,105 @@
+.tender-icon {
+  color: #393c45;
+  font-feature-settings: "salt" on, "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 20px;
+}
+
+.header-link {
+  @apply text-[#18191F] text-base font-normal;
+}
+
+.hero-container {
+  border-radius: 25px 25px 0px 0px;
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(46, 75, 233, 0.1) 100%);
+}
+
+.hero-title {
+  color: #141417;
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-[54px] !leading-normal xl: !leading-[76px] font-semibold;
+}
+
+.hero-title2 {
+  color: #141417;
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-[40px] !leading-normal xl: !leading-[56px] font-semibold;
+}
+
+.matrix {
+  font-feature-settings: "salt" on, "clig" off, "liga" off;
+  @apply text-2xl md:text-3xl text-blue-primary font-bold;
+}
+
+.product-card {
+  @apply px-[30px] pt-[30px] pb-[26px] bg-blue-primary;
+  border-radius: 10px 10px 5px 5px;
+}
+
+.testimonial-card {
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(46, 75, 233, 0.1) 100%);
+  @apply w-full lg:w-[464px] shrink-0 text-center rounded-t-[5px] px-6 pt-8 pb-6 sm:p-[30px_78px_20px];
+}
+
+.footer-link {
+  @apply text-base font-semibold text-white;
+}
+
+.submenu-container {
+  min-width: 238px;
+  border-radius: 8px;
+  white-space: nowrap;
+  background-color: white;
+  padding: 10px 8px;
+  border: 0.5px solid #d8d8d8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+  display: none;
+}
+
+.submenu-up-arrow {
+  position: absolute;
+  top: -0.5rem;
+  right: 30px;
+  width: 1rem;
+  height: 1rem;
+  border-width: 1px;
+  border-style: solid solid none none;
+  border-color: #d8d8d8;
+  background-color: white;
+  transform: rotate(-45deg);
+}
+
+.menu:hover .submenu-container {
+  display: block;
+}
+
+.benifits-card {
+  @apply flex items-start;
+}
+
+.benifit-details {
+  @apply border-l-2 border-[#393C45] pl-2.5;
+}
+
+.serial {
+  @apply pr-2.5 first-letter:transition-all ease-in-out duration-500;
+}
+
+.benifits-card:hover .serial {
+  @apply scale-125;
+}
+
+.benifits-card:hover .paragraph,
+.benifits-card:hover .heading2 {
+  @apply text-blue-primary;
+}
+
+.benifits-card:hover .benifit-details {
+  @apply border-blue-primary;
+}
+

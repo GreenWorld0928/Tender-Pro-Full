@@ -1,16 +1,16 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Home from "@/components/Home"
+import AreaDataPlatform from "@/components/AreaDataPlatform"
 
-const home = () => {
+const area = () => {
     return (
         <>
             <Header />
-            <Home />
+            <AreaDataPlatform />
             <Footer />
         </>
     )
 
 }
 
-export default home
+export default area
