@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from 'next/link';
+import React, { useState, useEffect, useRef } from "react";
+import ModalDialog from './common/ModalDialog';
 
 export default function Home() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const openModal = () => {
+    setIsOpen(true);
+  };
   return (
     <main className="w-full h-full mt-1 mb-[195px]">
+      {modalIsOpen && <ModalDialog modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} />}
       <section className="hero-container px-3 mx-3 md:mx-[30px] pt-[56px]">
         <div className="max-w-[858px] text-center mx-auto">
           <h1 className="hero-title">
@@ -15,7 +22,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
             accumsan felis nec
           </p>
-          <Link className="btn-primary" href="#">Book A Demo</Link>
+          <button className="btn-primary" onClick={openModal}>Book A Demo</button>
           <Image
             className="mx-auto w-full aspect-[516/537] max-w-[516px] mt-[69px]"
             src="/images/hero.png"

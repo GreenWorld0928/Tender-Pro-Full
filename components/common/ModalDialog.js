@@ -6,10 +6,11 @@ const customStyles = {
     content: {
         top: '50%',
         left: '50%',
-        right: 'auto',
+        right: '-20%',
         bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
+        padding: '20px',
+        transform: 'translate(-50%, -50%)',
+        borderRadius: '10px'
     },
 };
 const ModalDialog = (props) => {
@@ -38,7 +39,7 @@ const ModalDialog = (props) => {
                         </p>
                     </div>
                 </div>
-                <div className="mx-5"><SubmitForm /></div>
+                <div className="w-full lg:w-1/2 mx-5"><SubmitForm /></div>
             </div>
         </Modal>
 

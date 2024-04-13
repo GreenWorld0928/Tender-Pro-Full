@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from 'next/link';
 import ModalDialog from './common/ModalDialog';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+    const router = useRouter();
     const [modalIsOpen, setIsOpen] = useState(false);
     const openModal = () => {
         setIsOpen(true);
@@ -21,7 +23,7 @@ export default function Header() {
                         <button
                             className="header-link outline-none flex items-center space-x-3.5"
                         >
-                            <span>Products</span>
+                            <span className={`header-link ${router.pathname === '/area-data-platform' ? 'underline decoration-blue-700 decoration-2' : ''}`}>Products</span>
                             <i className="fa-solid fa-chevron-down"></i>
                         </button>
                         <div className="absolute top-0 -right-[30px] pt-10">
@@ -38,7 +40,7 @@ export default function Header() {
                             </div>
                         </div>
                     </li>
-                    <li><Link className="header-link" href="/about">About</Link></li>
+                    <li><Link className={`header-link ${router.pathname === '/about' ? 'underline decoration-blue-700 decoration-2' : ''}`} href="/about">About</Link></li>
                     <li><Link className="btn-primary-outlined" href="/contact-us">Get In Touch</Link></li>
                     <li><button className="btn-primary" onClick={openModal}>Book A Demo</button></li>
                 </ul>

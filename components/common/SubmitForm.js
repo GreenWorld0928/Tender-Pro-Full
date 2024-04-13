@@ -4,19 +4,24 @@ import Link from 'next/link';
 import ReCAPTCHA from "react-google-recaptcha";
 const SubmitForm = () => {
     const options = [
-        { value: "0", label: "industry 1" },
-        { value: "1", label: "industry 2" },
-        { value: "2", label: "industry 3" },
-        { value: "3", label: "industry 4" },
-        { value: "4", label: "industry 5" },
+        { value: "Insurance", label: "Insurance" },
+        { value: "Retail", label: "Retail" },
+        { value: "Finance", label: "Finance" },
+        { value: "Fintech", label: "Fintech" },
+        { value: "Government", label: "Government" },
+        { value: "Real estate", label: "Real estate" },
+        { value: "Npo / Charity", label: "Npo / Charity" },
+        { value: "Telco", label: "Telco" },
+        { value: "Consultancy", label: "Consultancy" },
+        { value: "Other", label: "Other" },
     ];
     const capchaRef = useRef();
     const [recapchaToken, setRecapchaToken] = useState("");
-	useEffect(()=>{
-		if(capchaRef){
-			capchaRef.current.reset(); 
-		}
-	}, [capchaRef]); 
+    useEffect(() => {
+        if (capchaRef) {
+            capchaRef.current.reset();
+        }
+    }, [capchaRef]);
     return (
         <form>
             <div className="flex flex-row justify-between">
@@ -38,8 +43,13 @@ const SubmitForm = () => {
                 <input type="text" className="primary-input" />
             </div>
             <div className="my-4">
+                <span className="paragraph1">Phone</span>
+                <input type="text" className="primary-input" />
+            </div>
+            <div className="my-4">
                 <span className="paragraph1">What is your industry?</span>
                 <Select
+                    className="mt-1"
                     options={options}
                     placeholder="Select the industry you work in"
                 />
