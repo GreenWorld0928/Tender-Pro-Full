@@ -17,6 +17,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-google-recaptcha": "^3.1.0",
+    "react-modal": "^3.16.1",
     "react-select": "^5.8.0"
   },
   "devDependencies": {
