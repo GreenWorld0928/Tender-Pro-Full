@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import SubmitForm from "./SubmitForm";
 const customStyles = {
     content: {
@@ -35,7 +35,7 @@ const ModalDialog = (props) => {
                     </h1>
                     <div className="max-w-[364px] py-5">
                         <p className="paragraph">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
                     </div>
                 </div>
