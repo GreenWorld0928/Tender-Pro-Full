@@ -4,7 +4,7 @@ import ModalDialog from './common/ModalDialog';
 import { useRouter } from 'next/router';
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
     const router = useRouter();
@@ -31,7 +31,7 @@ export default function Header() {
                     </div>
                 </Link>
                 <div className="lg:hidden">
-                    <FontAwesomeIcon size="2x" icon={faBars} onClick={() => { setMobileMenu((prev) => !prev) }} />
+                    <FontAwesomeIcon size="2x" icon={showMobileMenu ? faXmark : faBars} onClick={() => { setMobileMenu((prev) => !prev) }} />
                 </div>
                 <ul className="lg:flex items-center justify-end space-x-[30px] hidden">
                     <li className="relative menu">
