@@ -7,8 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      display: ['responsive', 'group-hover', 'group-focus'],
       screens: {
         xs: "400px",
+        lg: "992px",
         dx: "1366px",
         "2dx": "1440px",
         "3xl": "1680px",
