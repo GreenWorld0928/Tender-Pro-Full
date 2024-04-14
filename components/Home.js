@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useState, useEffect, useRef } from "react";
 import ModalDialog from './common/ModalDialog';
 import TestimonialCard from "./common/TestimonialCard";
+import Marquee from "react-fast-marquee";
 
 export default function Home() {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -35,11 +36,13 @@ export default function Home() {
       </section>
 
       <section className="mx-auto py-[100px] overflow-hidden">
-        <div className="flex justify-center items-center flex-nowrap space-x-14 marquee">
-          <Image src="/images/news1.png" width={250} height={40} alt="" />
-          <Image src="/images/news2.png" width={250} height={40} alt="" />
-          <Image src="/images/news3.png" width={250} height={40} alt="" />
-          <Image src="/images/news4.png" width={250} height={40} alt="" />
+        <div className="flex justify-center items-center flex-nowrap space-x-14 z-0">
+          <Marquee className="-z-40" speed={50} autoFill={true}>
+            <Image className="px-12" src="/images/news1.png" width={250} height={40} alt="" />
+            <Image className="px-12" src="/images/news2.png" width={250} height={40} alt="" />
+            <Image className="px-12" src="/images/news3.png" width={250} height={40} alt="" />
+            <Image className="px-12" src="/images/news4.png" width={250} height={40} alt="" />
+          </Marquee>
         </div>
       </section>
 
@@ -232,8 +235,6 @@ export default function Home() {
         <div
           className="pt-10 px-4 lg:px-0 flex flex-row items-stretch justify-start gap-6"
         >
-          <TestimonialCard />
-          <TestimonialCard />
           <TestimonialCard />
         </div>
         <div className="pt-[72px] flex flex-row items-center justify-center">

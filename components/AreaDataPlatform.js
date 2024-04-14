@@ -1,9 +1,16 @@
+import React, { useState, useEffect, useRef } from "react";
+import ModalDialog from './common/ModalDialog';
 import Image from "next/image";
 import Link from 'next/link';
 
 export default function AreaDataPlatform() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const openModal = () => {
+    setIsOpen(true);
+  };
   return (
     <main className="w-full h-full mt-1 mb-[195px]">
+      {modalIsOpen && <ModalDialog modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} />}
       <section className="tender-container pt-16">
         <div className="btn-secondary">AREA Data Platform</div>
         <div
@@ -30,8 +37,8 @@ export default function AreaDataPlatform() {
               </p>
             </div>
             <div className="pt-[50px] flex flex-row items-center gap-6 w-full">
-              <Link className="btn-primary" href="#">Book A Demo</Link>
-              <Link className="btn-primary-outlined" href="#">Contact Us</Link>
+              <button className="btn-primary" onClick={openModal}>Book A Demo</button>
+              <Link className="btn-primary-outlined" href="/contact-us">Contact Us</Link>
             </div>
           </div>
           <div className="w-full lg:w-1/2 pt-10 md:pt-0 md:pl-4">

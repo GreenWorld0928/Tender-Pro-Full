@@ -21,14 +21,12 @@
 
 .hero-title {
   color: #141417;
-  @apply text-3xl md:text-4xl lg:text-5xl text-[54px] !leading-normal lg:!leading-[76px] font-semibold;
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-[54px] !leading-normal xl:!leading-[76px] font-semibold;
 }
-
 .hero-title2 {
   color: #141417;
-  @apply text-2xl md:text-3xl lg:text-4xl text-[40px] !leading-normal lg:!leading-[56px] font-semibold;
+  @apply text-3xl md:text-4xl lg:text-5xl xl:text-[40px] !leading-normal xl:!leading-[56px] font-semibold;
 }
-
 .matrix {
   font-feature-settings: "salt" on, "clig" off, "liga" off;
   @apply text-2xl md:text-3xl text-blue-primary font-bold;
@@ -109,11 +107,13 @@
   background-color: white;
   @apply items-start;
 }
+
 .profile-card {
   border-radius: 10px;
   padding: 10px;
   background-color: #EAEDFD;
 }
-.primary-input{
+
+.primary-input {
   @apply mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-sm text-sm focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500;
 }
