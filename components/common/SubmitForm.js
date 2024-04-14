@@ -24,12 +24,12 @@ const SubmitForm = () => {
     }, [capchaRef]);
     return (
         <form>
-            <div className="flex flex-row justify-between">
-                <div className="me-2">
+            <div className="flex">
+                <div className="me-2 w-full">
                     <span className="paragraph1">First Name</span>
-                    <input type="text" className="primary-input" />
+                    <input type="text" className="primary-input " />
                 </div>
-                <div className="ms-2">
+                <div className="ms-2 w-full">
                     <span className="paragraph1">Last Name</span>
                     <input type="text" className="primary-input" />
                 </div>

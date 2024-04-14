@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from 'next/link';
 import ModalDialog from './common/ModalDialog';
 import { useRouter } from 'next/router';
+import Image from "next/image";
 
 export default function Header() {
     const router = useRouter();
@@ -15,7 +16,16 @@ export default function Header() {
                 className="tender-container flex items-center justify-between h-20 py-5"
             >
                 <Link href="/">
-                    <div className="tender-icon">TenderPro</div>
+                    <div className="flex flex-row">
+                        <Image
+                            className="w-[50px] aspect-square"
+                            src="/images/tender-pro-logo.png"
+                            alt=""
+                            width={50}
+                            height={50}
+                        />
+                       <div className="tender-icon pt-4">TenderPro</div> 
+                    </div>
                 </Link>
                 <div className="lg:hidden"><i className="fa-solid fa-bars text-[32px]"></i></div>
                 <ul className="lg:flex items-center justify-end space-x-[30px] hidden">
