@@ -1,9 +1,8 @@
-version: '3.8'
 services:
   backend:
     build: ./backend
     volumes:
-      - ./backend:/
+      - ./backend:/code
     ports:
       - "8000:8000"
     environment:
@@ -11,7 +10,7 @@ services:
   frontend:
     build: ./frontend
     volumes:
-      - ./frontend:/
-      - /node_modules
+      - ./frontend:/app
+      - /app/node_modules
     ports:
       - "3000:3000"

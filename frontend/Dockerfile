@@ -1,21 +1,35 @@
+# Stage 1: Building the application
+FROM node:18-alpine AS builder
 
-# Base on offical Node.js Alpine image
-FROM node:alpine
+# Create app directory
+WORKDIR /app
 
-# Set working directory
-WORKDIR /usr/app
-
-# Copy package.json and package-lock.json before other files
-COPY ./package*.json ./
+# Install app dependencies by copying package.json and package-lock.json
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the current directory contents into the container
+# Bundle app source
 COPY . .
 
-# Build the Next.js app
+# Build the application
 RUN npm run build
 
-# Command to run the Next.js app
-CMD ["npm", "start"]
+# Stage 2: Running the application with a lightweight Node image
+FROM node:18-alpine
+
+# Create app directory
+WORKDIR /app
+
+# Copy the built app from the builder stage
+COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+
+# Expose the port Next.js runs on
+EXPOSE 3000
+
+# Command to run the application
+CMD [ "npm", "start" ]
